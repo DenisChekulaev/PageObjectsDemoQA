@@ -1,4 +1,4 @@
-package com.demoqa;
+package com.demoqa.tests;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
@@ -23,6 +23,7 @@ public class RegistrationFormTest {
         $(".practice-form-wrapper").shouldHave(text("Student Registration Form"));
         executeJavaScript("$('footer').remove()"); // удалить футер
         executeJavaScript("$('#fixedban').remove()"); // удалить банер
+
         $("#firstName").setValue("Denis");
         $("#lastName").setValue("Chekulaev");
         $("#userEmail").setValue("Chekulaev@mail.ru");
@@ -44,6 +45,7 @@ public class RegistrationFormTest {
 
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
         $(".table-responsive").shouldHave(text("Denis"),text("Chekulaev"),text("Chekulaev@mail.ru"),text("Rostov-on-Don"));
+        $(".table-responsive table").$(byText("Date of Birth")).parent().shouldHave(text("05 August,1986"));
     }
 
 }
