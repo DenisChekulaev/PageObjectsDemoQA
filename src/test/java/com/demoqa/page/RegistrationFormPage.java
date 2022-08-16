@@ -1,8 +1,8 @@
-package com.demoqa.Page;
+package com.demoqa.page;
 
 import com.codeborne.selenide.SelenideElement;
-import com.demoqa.Page.conponents.CalendarComponent;
-import com.demoqa.Page.conponents.ResultsTableComponent;
+import com.demoqa.page.components.CalendarComponent;
+import com.demoqa.page.components.ResultsTableComponent;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
@@ -65,40 +65,40 @@ public class RegistrationFormPage {
         return this;
     }
 
-    public RegistrationFormPage setNumber(String valeu) {
-        numberInput.setValue(valeu);
+    public RegistrationFormPage setNumber(String value) {
+        numberInput.setValue(value);
         return this;
     }
 
-    public RegistrationFormPage setSubjects(String valeu) {
-        subjectsInput.setValue(valeu).pressEnter();
+    public RegistrationFormPage setSubjects(String value) {
+        subjectsInput.setValue(value).pressEnter();
         return this;
     }
 
-    public RegistrationFormPage setHobby(String valeu) {
-        hobbyInput.$(byText(valeu)).click();
+    public RegistrationFormPage setHobby(String value) {
+        hobbyInput.$(byText(value)).click();
         return this;
     }
 
-    public RegistrationFormPage uploadPicture(String valeu) {
-        pictureInput.uploadFromClasspath(valeu);
+    public RegistrationFormPage uploadPicture(String value) {
+        pictureInput.uploadFromClasspath(value);
         return this;
     }
 
-    public RegistrationFormPage setAddress(String valeu) {
-        addressInput.setValue(valeu);
+    public RegistrationFormPage setAddress(String value) {
+        addressInput.setValue(value);
         return this;
     }
 
-    public RegistrationFormPage setState(String valeu) {
+    public RegistrationFormPage setState(String value) {
         stateInput.click();
-        $(byText(valeu)).click();
+        $(byText(value)).click();
         return this;
     }
 
-    public RegistrationFormPage setCity(String valeu) {
+    public RegistrationFormPage setCity(String value) {
         cityInput.click();
-        $(byText(valeu)).click();
+        $(byText(value)).click();
         return this;
     }
 

@@ -1,4 +1,4 @@
-package com.demoqa.Page.conponents;
+package com.demoqa.page.components;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
